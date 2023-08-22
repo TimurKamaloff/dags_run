@@ -5,11 +5,11 @@ import {DagInfoContainer} from "./dag-info.container";
 
 @NgModule({
   declarations: [
+    DagInfoContainer,
     DagInfoComponent,
-    DagInfoContainer
   ],
   imports: [DagInfoRoutingModule],
   providers: [],
-  bootstrap: []
+  bootstrap: [],
 })
-export class DagInfoModule { }
+export class DagInfoModule {}

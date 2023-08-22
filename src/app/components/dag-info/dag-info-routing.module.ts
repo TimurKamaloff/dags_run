@@ -1,11 +1,11 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {DagInfoComponent} from "./dag-info.component";
+import {DagInfoContainer} from "./dag-info.container";
 
 const routes: Routes = [
   {
     path: '',
-    component: DagInfoComponent,
+    component: DagInfoContainer,
   }
 ];
 @NgModule({

@@ -1,11 +1,11 @@
 import {NgModule} from '@angular/core';
 import {RouterModule, Routes} from '@angular/router';
-import {DagsRunsComponent} from "./dags-runs.component";
+import {DagsRunsContainer} from "./dags-runs.container";
 
 const routes: Routes = [
   {
     path: '',
-    component: DagsRunsComponent,
+    component: DagsRunsContainer,
   }
 ];
 @NgModule({
