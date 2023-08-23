@@ -6,6 +6,8 @@ import {CommonModule} from "@angular/common";
 import {BrowserModule} from "@angular/platform-browser";
 import {StoreDevtoolsModule} from "@ngrx/store-devtools";
 import {StoreModule} from "@ngrx/store";
+import {CommonHeaderModule} from "./components/common-header/common-header.module";
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -16,7 +18,9 @@ import {StoreModule} from "@ngrx/store";
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({}, {}),
-    StoreDevtoolsModule.instrument()
+    StoreDevtoolsModule.instrument(),
+    CommonHeaderModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]
