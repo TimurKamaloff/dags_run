@@ -1,7 +1,7 @@
-<div class="content">
-  <div class="content-row">
+<div class="content" [routerLink]="'/dag-info/' + dag.id">
+  <div class="content-row" (contextmenu)="$event.preventDefault()">
     <div class="cell">
-      <mat-slide-toggle color="primary" [hideIcon]="true"></mat-slide-toggle>{{dag?.name}}
+      <mat-slide-toggle (click)="$event.stopPropagation()" color="primary" [hideIcon]="true" [checked]="!!dag?.status" (change)="onChangeDagStatus($event)"></mat-slide-toggle>{{dag?.name}}
     </div>
     <div class="cell">{{dag?.user}}</div>
     <div class="cell">

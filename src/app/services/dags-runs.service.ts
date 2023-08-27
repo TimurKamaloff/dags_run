@@ -14,10 +14,12 @@ export class DagsRunsService {
         successRunsCount: i * 3,
         schedule: 'Daily',
         lastRunDate: new Date(Math.random() * 10 * 2000000000000),
+        status: i % 2,
+        id: i,
       })
     }
     return of(null).pipe(
-      delay(5000),
+      delay(50),
       switchMap(() => of(dags))
     );
   }

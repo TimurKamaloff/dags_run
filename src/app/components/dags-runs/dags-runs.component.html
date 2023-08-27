@@ -10,10 +10,16 @@
     <div class="dags-filter-header">DAGs</div>
     <div class="dags-filter-filters">
       <div>
-        <mat-button-toggle-group>
-          <mat-button-toggle> Все </mat-button-toggle>
-          <mat-button-toggle> Активные </mat-button-toggle>
-          <mat-button-toggle> Остановленные </mat-button-toggle>
+        <mat-button-toggle-group
+          [value]="filtersConfig?.selectedDagsStatus"
+          (change)="onChangeDagsStatusFilter($event, 'selectedDagsStatus')"
+        >
+          <mat-button-toggle
+            *ngFor="let status of dagsStatuses"
+            [value]="status.value"
+          >
+            {{ status.label }}
+          </mat-button-toggle>
         </mat-button-toggle-group>
       </div>
 
@@ -25,7 +31,13 @@
 
       <div class="form-div">
         <mat-form-field appearance="outline">
-          <input matInput placeholder="Поиск" />
+          <input
+            matInput
+            type="text"
+            placeholder="Поиск"
+            [value]="filtersConfig ? filtersConfig.nameSearchString : ''"
+            (input)="onChangeDagsStatusFilter($event, 'nameSearchString')"
+          />
           <mat-icon matPrefix>search</mat-icon>
         </mat-form-field>
       </div>
@@ -55,13 +67,17 @@
   </div>
 
   <div class="dags-list">
-    <div class="spinner" *ngIf="!dagsRunsLoadingStatus?.isLoaded; else dagsContent">
+    <div
+      class="spinner"
+      *ngIf="!dagsRunsLoadingStatus?.isLoaded; else dagsContent"
+    >
       <mat-spinner color="primary"></mat-spinner>
     </div>
     <ng-template #dagsContent
       ><app-dag-run-item
         *ngFor="let dag of dagsRuns"
         [dag]="dag"
+        (changeDagStatus)="changeDagStatus.emit($event)"
       ></app-dag-run-item
     ></ng-template>
   </div>

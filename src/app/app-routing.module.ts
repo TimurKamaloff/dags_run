@@ -15,7 +15,7 @@ const routes: Routes = [
       ),
   },
   {
-    path: 'dag-info',
+    path: 'dag-info/:id',
     loadChildren: () =>
       import('./components/dag-info/dag-info.module').then(
         (m) => m.DagInfoModule,

@@ -26,6 +26,25 @@ export const dagsRunsReducer = (
         dagsRunsData: action.payload
       };
 
+    case DagsRunsActions.ChangeFiltersConfig:
+      return {
+        ...state,
+        filtersConfig: action.payload
+      };
+
+    case DagsRunsActions.ChangeDagStatus: {
+      const result = [...state.dagsRunsData];
+      const idx = result.findIndex(({id}) => id === action.payload.dagId);
+      result[idx] = {
+        ...result[idx],
+        status: action.payload.dagStatus,
+      }
+      return {
+        ...state,
+        dagsRunsData: result
+      };
+    }
+
     default:
       return state;
   }
