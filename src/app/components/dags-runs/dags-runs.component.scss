@@ -6,6 +6,7 @@
     width: 90%;
     margin: 0 auto;
     flex-direction: column;
+    height: calc(100% - #{$common-header-height} - #{$default-offset});
 
     .actions-button {
       margin: $default-offset-large 0;
@@ -24,6 +25,7 @@
         align-items: center;
         display: flex;
         font-weight: 700;
+        justify-content: center;
 
         .mat-icon {
           margin: 0 $default-offset-half;
@@ -74,5 +76,18 @@
         }
       }
     }
+  }
+
+  .dags-list {
+    margin-top: $default-offset;
+    overflow: hidden scroll;
+    height: 100%;
+  }
+
+  .spinner {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
   }
 }

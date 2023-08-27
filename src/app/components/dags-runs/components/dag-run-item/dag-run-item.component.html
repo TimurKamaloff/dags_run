@@ -1,0 +1,18 @@
+<div class="content">
+  <div class="content-row">
+    <div class="cell">
+      <mat-slide-toggle color="primary" [hideIcon]="true"></mat-slide-toggle>{{dag?.name}}
+    </div>
+    <div class="cell">{{dag?.user}}</div>
+    <div class="cell">
+      <div class="runs-circle total">{{(dag.successRunsCount + dag.failedRunsCount) || 0}}</div>
+      <div class="runs-circle success">{{dag?.successRunsCount}}</div>
+      <div class="runs-circle failed">{{dag?.failedRunsCount}}</div>
+    </div>
+    <div class="cell">
+      <span class="schedule">{{dag?.schedule}}</span>
+    </div>
+    <div class="cell date">{{dag?.lastRunDate | date: 'yyyy-MM-dd, HH:mm:ss' }}</div>
+    <div class="cell">123</div>
+  </div>
+</div>

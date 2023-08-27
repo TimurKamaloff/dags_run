@@ -11,7 +11,7 @@
     <div class="dags-filter-filters">
       <div>
         <mat-button-toggle-group>
-          <mat-button-toggle color="primary"> Все </mat-button-toggle>
+          <mat-button-toggle> Все </mat-button-toggle>
           <mat-button-toggle> Активные </mat-button-toggle>
           <mat-button-toggle> Остановленные </mat-button-toggle>
         </mat-button-toggle-group>
@@ -52,5 +52,17 @@
       </div>
       <div class="cell">Действия</div>
     </div>
+  </div>
+
+  <div class="dags-list">
+    <div class="spinner" *ngIf="!dagsRunsLoadingStatus?.isLoaded; else dagsContent">
+      <mat-spinner color="primary"></mat-spinner>
+    </div>
+    <ng-template #dagsContent
+      ><app-dag-run-item
+        *ngFor="let dag of dagsRuns"
+        [dag]="dag"
+      ></app-dag-run-item
+    ></ng-template>
   </div>
 </div>
