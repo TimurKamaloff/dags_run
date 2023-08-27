@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { DagsRunsType } from './types/dags-runs';
+import {LoadingStatus} from "../../common-types/loadingStatus";
 
 @Component({
   selector: 'app-dags-runs',
@@ -7,5 +9,6 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DagsRunsComponent {
-
+  @Input() dagsRuns: DagsRunsType[] | null;
+  @Input() dagsRunsLoadingStatus: LoadingStatus | null;
 }

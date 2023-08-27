@@ -1,1 +1,81 @@
-/* You can add global styles to this file, and also import other style files */
+@import "src/styles/vars";
+
+
+body {
+  margin: 0;
+  font-family: Inter, Roboto, "Helvetica Neue", sans-serif;
+}
+
+mat-button-toggle-group {
+  border-radius: $default-offset-half !important;
+  height: $default-offset-large;
+  align-items: center
+}
+
+.mat-button-toggle {
+  &-checked {
+    font-weight: bold;
+
+    .mat-button-toggle-button {
+      color:  white !important;
+      background-color: $main-button-color !important;
+    }
+  }
+}
+
+.mat-mdc-form-field-infix {
+  min-height: $default-offset-large !important;
+  max-height: $default-offset-large !important;
+  align-items: center;
+  display: flex;
+}
+
+.mat-mdc-form-field-infix  {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+
+.mat-mdc-form-field-icon-prefix {
+  align-items: center;
+  display: flex;
+  height: $default-offset-large;
+}
+
+.mdc-switch__handle {
+  height: 100% !important;
+  width: 100% !important;
+  background-color: white !important;
+}
+
+.mdc-switch__shadow {
+  background-color: white !important;
+}
+
+.mdc-switch:enabled .mdc-switch__track::after {
+  background-color: $main-button-color !important;
+}
+
+.mdc-switch--selected .mdc-switch__handle-track {
+  transform: translateX(calc(100% + #{$default-offset-quarter})) !important;
+}
+
+::-webkit-scrollbar {
+  width: $default-offset-half;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 0.5rem;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}

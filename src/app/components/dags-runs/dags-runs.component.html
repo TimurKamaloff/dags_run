@@ -1,1 +1,68 @@
-<p>dags-runs works!</p>
+<div class="content">
+  <div class="actions-button">
+    <button mat-flat-button color="primary">
+      <mat-icon>add_circle</mat-icon>Создать DAG
+    </button>
+    <button mat-flat-button color="accent">Импорт DAG</button>
+  </div>
+
+  <div class="dags-filter">
+    <div class="dags-filter-header">DAGs</div>
+    <div class="dags-filter-filters">
+      <div>
+        <mat-button-toggle-group>
+          <mat-button-toggle> Все </mat-button-toggle>
+          <mat-button-toggle> Активные </mat-button-toggle>
+          <mat-button-toggle> Остановленные </mat-button-toggle>
+        </mat-button-toggle-group>
+      </div>
+
+      <div class="form-div">
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Поиск по тегам" />
+        </mat-form-field>
+      </div>
+
+      <div class="form-div">
+        <mat-form-field appearance="outline">
+          <input matInput placeholder="Поиск" />
+          <mat-icon matPrefix>search</mat-icon>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="table-header">
+      <div class="cell">
+        <mat-icon [matTooltip]="'Тут будет какой-то текст тултипа'"
+          >info_outline</mat-icon
+        >DAG
+      </div>
+      <div class="cell">Создатель</div>
+      <div class="cell">
+        Запуски<mat-icon [matTooltip]="'Тут будет какой-то текст тултипа'"
+          >info_outline</mat-icon
+        >
+      </div>
+      <div class="cell">Расписание</div>
+      <div class="cell">
+        Последний запуск<mat-icon
+          [matTooltip]="'Тут будет какой-то текст тултипа'"
+          >info_outline</mat-icon
+        >
+      </div>
+      <div class="cell">Действия</div>
+    </div>
+  </div>
+
+  <div class="dags-list">
+    <div class="spinner" *ngIf="!dagsRunsLoadingStatus?.isLoaded; else dagsContent">
+      <mat-spinner color="primary"></mat-spinner>
+    </div>
+    <ng-template #dagsContent
+      ><app-dag-run-item
+        *ngFor="let dag of dagsRuns"
+        [dag]="dag"
+      ></app-dag-run-item
+    ></ng-template>
+  </div>
+</div>
