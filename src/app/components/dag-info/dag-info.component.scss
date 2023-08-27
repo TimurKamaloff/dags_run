@@ -1,0 +1,86 @@
+@import "src/styles/vars";
+
+:host {
+  .content {
+    display: flex;
+    width: 90%;
+    margin: 0 auto;
+    flex-direction: column;
+  }
+
+  #pipeline-info {
+    padding: 20px 0;
+    background-color: #D8E4F4;
+
+    #pipeline-dag {
+      font-size: 20px;
+
+      span {
+        font-family: 'Inter-Bold', sans-serif;
+      }
+    }
+
+    #pipeline-control-buttons {
+      margin-top: 20px;
+    }
+
+    .pipeline-dag-btn {
+      color: #FFFFFF;
+      padding: 5px 20px;
+      border: none;
+      outline: none;
+      cursor: pointer;
+      border-radius: 100px;
+      margin-right: 10px;
+
+      span {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+
+        .mat-icon {
+          margin: 0 $default-offset-quarter;
+        }
+      }
+    }
+
+    .pipeline-dag-btn:hover {
+      opacity: 0.8;
+    }
+
+    .btn-blue {
+      background-color: #6D7BE0;
+    }
+
+    .btn-green {
+      background-color: #77CA58;
+    }
+
+    .btn-red {
+      background-color: #EB7980;
+    }
+  }
+
+  #pipeline-working-zone {
+    #pipeline-working-panel {
+      position: fixed;
+      background-color: #D8E4F4;
+      top: 220px;
+      left: 20px;
+      padding: 0 10px;
+      border-radius: 10px;
+      font-size: 30px;
+
+      div {
+        margin: 10px 0;
+        padding: 3px 5px;
+        cursor: pointer;
+      }
+
+      div:hover {
+        background-color: #DAE1F9;
+        border-radius: 3px;
+      }
+    }
+  }
+}
