@@ -5,4 +5,6 @@ export type DagsRunsType = {
   successRunsCount: number;
   lastRunDate: Date;
   schedule: string;
+  status: number,
+  id: number;
 }
