@@ -1,1 +1,34 @@
-<p>dag-info works!</p>
+<div id="pipeline-info">
+  <div class="content">
+    <div id="pipeline-dag">
+      <span id="pipeline-dag-title">DAG:</span> dag_name_1
+    </div>
+    <div id="pipeline-control-buttons">
+      <button class="pipeline-dag-btn btn-blue">
+        <span>
+          <mat-icon aria-hidden="false" fontIcon="save"></mat-icon>
+          Сохранить
+        </span>
+      </button>
+      <button class="pipeline-dag-btn btn-green">
+        <span>
+          <mat-icon aria-hidden="false" fontIcon="play_arrow"></mat-icon>
+          Запустить
+        </span>
+      </button>
+      <button class="pipeline-dag-btn btn-red">
+        <span>
+          <mat-icon aria-hidden="false" fontIcon="delete"></mat-icon>
+          Удалить
+        </span>
+      </button>
+    </div>
+  </div>
+</div>
+<div id="pipeline-working-zone">
+  <div id="pipeline-working-panel">
+    <div [matTooltip]="'Создать новую задачу'"><i class="bi bi-plus-square"></i></div>
+    <div [matTooltip]="'Создать новую область'"><i class="bi bi-fullscreen"></i></div>
+    <div [matTooltip]="'Создать комментрий'"><i class="bi bi-chat-dots"></i></div>
+  </div>
+</div>
