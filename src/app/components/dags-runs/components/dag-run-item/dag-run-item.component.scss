@@ -1,0 +1,61 @@
+@import "src/styles/vars";
+
+:host {
+  .content {
+    background-color: #e5ebf5;
+    border-radius: $default-offset-half;
+    width: 100%;
+    height: 3rem;
+    margin-bottom: $default-offset;
+
+    &-row {
+      align-content: space-evenly;
+      display: grid;
+      grid-template-columns: 1.2fr repeat(5, 1fr);
+      padding: 0 $default-offset;
+      height: 100%;
+    }
+
+    .cell {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    .runs-circle {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 $default-offset-quarter;
+      height: 2rem;
+      width: 2rem;
+      border-radius: 50%;
+    }
+
+    .total {
+      border: 1px solid blue;
+    }
+
+    .success {
+      border: 1px solid green;
+    }
+
+    .failed {
+      border: 1px solid red;
+    }
+
+    .schedule, .date {
+      color: #74777c;
+    }
+
+    .schedule {
+      background-color: #cfd5dd;
+      border-radius: 0.5rem;
+      padding: $default-offset-half $default-offset-medium;
+    }
+
+    .date {
+      text-decoration: underline;
+    }
+  }
+}
