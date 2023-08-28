@@ -1,4 +1,5 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input, OnChanges, SimpleChanges} from '@angular/core';
+import {DagsRunsType} from "../dags-runs/types/dags-runs";
 
 @Component({
   selector: 'app-dag-info',
@@ -6,6 +7,10 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
   styleUrls: ['./dag-info.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DagInfoComponent {
+export class DagInfoComponent implements OnChanges {
+  @Input() selectedDag: DagsRunsType | null;
 
+  public ngOnChanges(changes:SimpleChanges) {
+    console.log({changes});
+  }
 }

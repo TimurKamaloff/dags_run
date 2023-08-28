@@ -18,7 +18,6 @@ export const selectDagsRunsData = createSelector(
   selectDagsRuns,
   selectFiltersConfig,
   (state: InitialDagsRunsStateType, filtersConfig) => {
-    console.log({ filtersConfig, state });
     let result = filtersConfig.selectedDagsStatus === 2
       ? state.dagsRunsData
       : state.dagsRunsData.filter(
@@ -30,3 +29,7 @@ export const selectDagsRunsData = createSelector(
     return result;
   },
 );
+
+export const selectDagFromIndex = createSelector(selectDagsRuns, (state: InitialDagsRunsStateType, props: {dagId: number}) => {
+  return state.dagsRunsData?.find(dag => dag.id === props.dagId) || state.dagsRunsData[0]; // TODO rewrite
+})

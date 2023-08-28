@@ -1,4 +1,4 @@
-<div class="content" [routerLink]="'/dag-info/' + dag.id">
+<div class="content" (click)="redirectToInfoPage()">
   <div class="content-row" (contextmenu)="$event.preventDefault()">
     <div class="cell">
       <mat-slide-toggle (click)="$event.stopPropagation()" color="primary" [hideIcon]="true" [checked]="!!dag?.status" (change)="onChangeDagStatus($event)"></mat-slide-toggle>{{dag?.name}}

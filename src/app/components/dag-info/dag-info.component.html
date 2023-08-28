@@ -1,7 +1,7 @@
 <div id="pipeline-info">
   <div class="content">
     <div id="pipeline-dag">
-      <span id="pipeline-dag-title">DAG:</span> dag_name_1
+      <span id="pipeline-dag-title">DAG:</span> {{selectedDag?.name}}
     </div>
     <div id="pipeline-control-buttons">
       <button class="pipeline-dag-btn btn-blue">
@@ -31,4 +31,5 @@
     <div [matTooltip]="'Создать новую область'"><i class="bi bi-fullscreen"></i></div>
     <div [matTooltip]="'Создать комментрий'"><i class="bi bi-chat-dots"></i></div>
   </div>
+  <app-draggable-field></app-draggable-field>
 </div>

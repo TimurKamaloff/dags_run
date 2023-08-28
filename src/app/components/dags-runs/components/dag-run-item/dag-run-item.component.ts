@@ -2,6 +2,7 @@ import {ChangeDetectionStrategy, Component, EventEmitter, Input, Output} from '@
 import { DagsRunsType } from '../../types/dags-runs';
 import {MatSlideToggleChange} from "@angular/material/slide-toggle";
 import {ChangeDagStatusType} from "../../types/change-dag-status.type";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-dag-run-item',
@@ -14,7 +15,13 @@ export class DagRunItemComponent {
 
   @Output() changeDagStatus = new EventEmitter<ChangeDagStatusType>();
 
+  constructor(private router: Router) {}
+
   public onChangeDagStatus(event: MatSlideToggleChange): void {
     this.changeDagStatus.emit({dagId: this.dag.id, dagStatus: +event.checked})
+  }
+
+  public redirectToInfoPage(): void {
+    this.router.navigate(['/dag-info/' + this.dag.id])
   }
 }
