@@ -23,6 +23,7 @@
     "@angular/router": "^16.0.0",
     "@babel/eslint-parser": "^7.22.10",
     "@mdi/font": "^7.2.96",
+    "@ngneat/until-destroy": "^10.0.0",
     "@ngrx/core": "^1.2.0",
     "@ngrx/effects": "^16.2.0",
     "@ngrx/router-store": "^16.2.0",
