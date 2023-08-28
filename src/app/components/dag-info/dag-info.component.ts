@@ -1,4 +1,5 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { DagsRunsType } from '../dags-runs/types/dags-runs';
 
 @Component({
   selector: 'app-dag-info',
@@ -7,5 +8,5 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DagInfoComponent {
-
+  @Input() selectedDag: DagsRunsType | null;
 }

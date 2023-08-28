@@ -1,6 +1,9 @@
 @import "src/styles/vars";
 
 :host {
+  height: 100%;
+  display: block;
+
   .content {
     display: flex;
     width: 90%;
@@ -63,14 +66,16 @@
   }
 
   #pipeline-working-zone {
+    height: 100%;
+
     #pipeline-working-panel {
       position: fixed;
       background-color: #D8E4F4;
-      top: 13.75rem;
-      left: 1.25rem;
-      padding: 0 0.625rem;
-      border-radius: 0.625rem;
-      font-size: 1.875rem;
+      top: 25%;
+      left: 1%;
+      padding: 0 $default-offset;
+      border-radius: $default-offset;
+      font-size: 2rem;
 
       div {
         margin: 0.625rem 0;
