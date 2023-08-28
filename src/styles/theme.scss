@@ -9,7 +9,7 @@ $theme: mat.define-light-theme((
   color: (
     primary: $theme-primary,
     accent: $theme-accent,
-    warn: $theme-warn
+    warn: $theme-warn,
   ),
   typography: mat.define-typography-config(),
 ));

@@ -1,10 +1,12 @@
 @import "src/styles/vars";
 @import "node_modules/bootstrap-icons/font/bootstrap-icons.scss";
 
+* {
+  font-family: Montserrat, Inter, sans-serif;
+}
 
 body {
   margin: 0;
-  font-family: Inter, Roboto, "Helvetica Neue", sans-serif;
 }
 
 mat-button-toggle-group {
@@ -19,7 +21,7 @@ mat-button-toggle-group {
 
     .mat-button-toggle-button {
       color:  white !important;
-      background-color: $main-button-color !important;
+      background-color: $main-primary-color !important;
     }
   }
 }
@@ -54,11 +56,15 @@ mat-button-toggle-group {
 }
 
 .mdc-switch:enabled .mdc-switch__track::after {
-  background-color: $main-button-color !important;
+  background-color: $main-primary-color !important;
 }
 
 .mdc-switch--selected .mdc-switch__handle-track {
   transform: translateX(calc(100% + #{$default-offset-quarter})) !important;
+}
+
+.mat-mdc-text-field-wrapper {
+  border-radius: 0.4rem !important;
 }
 
 ::-webkit-scrollbar {
