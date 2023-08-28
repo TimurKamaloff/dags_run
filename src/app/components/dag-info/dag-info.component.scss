@@ -9,11 +9,11 @@
   }
 
   #pipeline-info {
-    padding: 20px 0;
+    padding: 1.25rem 0;
     background-color: #D8E4F4;
 
     #pipeline-dag {
-      font-size: 20px;
+      font-size: 1.25rem;
 
       span {
         font-weight: 700;
@@ -21,17 +21,18 @@
     }
 
     #pipeline-control-buttons {
-      margin-top: 20px;
+      margin-top: 1.25rem;
     }
 
     .pipeline-dag-btn {
       color: #FFFFFF;
-      padding: 10px 20px;
+      padding: 0.625rem 1.25rem;
       border: none;
       outline: none;
       cursor: pointer;
-      border-radius: 100px;
-      margin-right: 10px;
+      border-radius: 7rem;
+      margin-right: 0.625rem;
+      font-size: 1em;
 
       span {
         align-items: center;
@@ -39,7 +40,7 @@
         justify-content: space-between;
 
         i {
-          margin-right: 5px;
+          margin-right: 0.313rem;
         }
       }
     }
@@ -65,21 +66,21 @@
     #pipeline-working-panel {
       position: fixed;
       background-color: #D8E4F4;
-      top: 220px;
-      left: 20px;
-      padding: 0 10px;
-      border-radius: 10px;
-      font-size: 30px;
+      top: 13.75rem;
+      left: 1.25rem;
+      padding: 0 0.625rem;
+      border-radius: 0.625rem;
+      font-size: 1.875rem;
 
       div {
-        margin: 10px 0;
-        padding: 3px 5px;
+        margin: 0.625rem 0;
+        padding: 0.188rem 0.313rem;
         cursor: pointer;
       }
 
       div:hover {
         background-color: #DAE1F9;
-        border-radius: 3px;
+        border-radius: 0.188rem;
       }
     }
   }
