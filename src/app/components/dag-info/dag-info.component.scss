@@ -16,7 +16,7 @@
       font-size: 20px;
 
       span {
-        font-family: 'Inter-Bold', sans-serif;
+        font-weight: 700;
       }
     }
 
@@ -26,7 +26,7 @@
 
     .pipeline-dag-btn {
       color: #FFFFFF;
-      padding: 5px 20px;
+      padding: 10px 20px;
       border: none;
       outline: none;
       cursor: pointer;
@@ -38,8 +38,8 @@
         display: flex;
         justify-content: space-between;
 
-        .mat-icon {
-          margin: 0 $default-offset-quarter;
+        i {
+          margin-right: 5px;
         }
       }
     }

@@ -34,15 +34,15 @@
     }
 
     .total {
-      border: 1px solid blue;
+      border: 1px solid #8692E8;
     }
 
     .success {
-      border: 1px solid green;
+      border: 1px solid #91D874;
     }
 
     .failed {
-      border: 1px solid red;
+      border: 1px solid #EA6262;
     }
 
     .schedule, .date {
@@ -57,6 +57,38 @@
 
     .date {
       text-decoration: underline;
+    }
+
+    .dag-row-buttons-control {
+      background-color: #F1F5F9;
+      border: 1px solid #D9D9D9;
+      border-radius: 0;
+      padding: 3px;
+      text-align: center;
+      width: 30px;
+      font-size: 1.2em;
+      cursor: pointer;
+    }
+
+    .dag-buttons {
+      justify-content: right;
+      padding-right: 2rem;
+    }
+
+    .dag-row-buttons-control:hover {
+      background-color: #eceff1;
+    }
+
+    .btn-save {
+      color: #8692E8;
+    }
+
+    .btn-start {
+      color: #91D874;
+    }
+
+    .btn-delete {
+      color: #EA6262;
     }
   }
 }

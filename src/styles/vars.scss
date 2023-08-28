@@ -2,7 +2,10 @@
 @include mat.core();
 
 $main-color: #272f3e;
-$main-button-color: mat.get-color-from-palette(mat.$blue-palette, 800);
+//$main-button-color: mat.get-color-from-palette(mat.$blue-palette, 800);
+$main-primary-color: #3C50E0;
+$second-primary-color: #8692E8;
+$grey-button-color: #EAEAEA;
 $white-font-color: #f4f4f4;
 
 $default-offset: 1rem;
