@@ -20,7 +20,6 @@ export class DagInfoContainer {
   ) {
     this.activatedRoute.params.subscribe((data) => {
       const dagId = +(data as any).id;
-      console.log({data, dagId});
       this.selectedDag$ = this.store.pipe(select(selectDagFromIndex, { dagId }));
     });
   }
