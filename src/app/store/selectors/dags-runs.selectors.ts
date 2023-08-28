@@ -26,6 +26,9 @@ export const selectDagsRunsData = createSelector(
     if (filtersConfig?.nameSearchString) {
       result = result.filter(({name}) => name.includes(filtersConfig.nameSearchString))
     }
+    if (filtersConfig?.tagSearchString) {
+      result = result.filter(({tags}) => tags?.some(tag => tag.includes(filtersConfig.tagSearchString)))
+    }
     return result;
   },
 );

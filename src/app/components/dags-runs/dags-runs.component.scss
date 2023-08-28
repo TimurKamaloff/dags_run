@@ -33,6 +33,17 @@
         font-weight: 500;
         letter-spacing: normal;
       }
+
+      span {
+        display: flex;
+        vertical-align: middle;
+        align-items: center;
+
+        i {
+          font-size: 1.5rem;
+          margin-right: 0.3rem;
+        }
+      }
     }
 
     .table-header {
@@ -45,6 +56,10 @@
         display: flex;
         font-weight: 700;
         justify-content: center;
+
+        &:first-child {
+          margin-right: 4.1rem;
+        }
 
         .mat-icon {
           margin: 0 $default-offset-half;
