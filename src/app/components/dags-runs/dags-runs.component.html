@@ -1,12 +1,16 @@
 <div class="content">
   <div class="actions-button">
     <button id="btn-create-new-dag" mat-flat-button>
-      <i class="bi bi-plus-circle-fill"></i>
-      Создать DAG
+      <span>
+        <i class="bi bi-plus-circle-fill"></i>
+        Создать DAG
+      </span>
     </button>
     <button id="btn-import-dag" mat-flat-button>
-      <i class="bi bi-box-arrow-in-left"></i>
-      Импорт DAG
+      <span>
+        <i class="bi bi-box-arrow-in-left"></i>
+        Импорт DAG
+      </span>
     </button>
   </div>
 
@@ -29,7 +33,13 @@
 
       <div class="form-div">
         <mat-form-field appearance="outline">
-          <input matInput placeholder="Поиск по тегам" />
+          <input
+            matInput
+            type="text"
+            placeholder="Поиск по тегам"
+            [value]="filtersConfig ? filtersConfig.tagSearchString : ''"
+            (input)="onChangeDagsStatusFilterTag($event, 'tagSearchString')"
+          />
         </mat-form-field>
       </div>
 
@@ -48,10 +58,11 @@
     </div>
 
     <div class="table-header">
-      <div class="cell">
-        <mat-icon [matTooltip]="'Тут будет какой-то текст тултипа'"
-          >info_outline</mat-icon
-        >DAG
+      <div class="cell dag-name-cell">
+        <mat-icon [matTooltip]="'Тут будет какой-то текст тултипа'">
+          info_outline
+        </mat-icon>
+        DAG
       </div>
       <div class="cell">Создатель</div>
       <div class="cell">

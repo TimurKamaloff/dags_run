@@ -35,4 +35,11 @@ export class DagsRunsComponent {
       [field]: event.value
     } as DagsRunsFilterConfigType)
   }
+
+  public onChangeDagsStatusFilterTag(event: Event, field: string): void {
+    this.changeDagsStatusFilter.emit({
+      ...this.filtersConfig,
+      [field]: (event?.target as any)?.value
+    } as DagsRunsFilterConfigType);
+  }
 }

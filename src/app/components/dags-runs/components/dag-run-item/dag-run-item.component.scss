@@ -6,7 +6,8 @@
     border-radius: $default-offset-half;
     cursor: pointer;
     width: 100%;
-    height: 3rem;
+    height: auto;
+    padding: 0.5rem 0;
     margin-bottom: $default-offset;
 
     &-row {
@@ -89,6 +90,24 @@
 
     .btn-delete {
       color: #EA6262;
+    }
+
+    #dag-tag-container {
+      margin-top: 0.118rem;
+      max-width: 7rem;
+      height: auto;
+      .dag-tag {
+        font-size: 0.7rem;
+        padding: 0.1rem 0.8rem;
+        background-color: #D1DFF2;
+        border-radius: 0.313rem;
+        border: 1px solid #C7D5E6;
+        display: inline-flex;
+        margin-left: 0.2rem;
+        &:first-child {
+          margin-left: 0;
+        }
+      }
     }
   }
 }

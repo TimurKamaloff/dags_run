@@ -1,5 +1,6 @@
 export type DagsRunsType = {
   name: string;
+  tags?: string[];
   user: string;
   failedRunsCount: number;
   successRunsCount: number;
