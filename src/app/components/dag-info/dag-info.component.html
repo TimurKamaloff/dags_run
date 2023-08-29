@@ -24,9 +24,9 @@
 </div>
 <div id="pipeline-working-zone">
   <div id="pipeline-working-panel">
-    <div [matTooltip]="'Создать новую задачу'"><i class="bi bi-plus-square"></i></div>
-    <div [matTooltip]="'Создать новую область'"><i class="bi bi-fullscreen"></i></div>
-    <div [matTooltip]="'Создать комментрий'"><i class="bi bi-chat-dots"></i></div>
+    <div [matTooltip]="'Создать новую задачу'" (click)="createElement('task')"><i class="bi bi-plus-square"></i></div>
+    <div [matTooltip]="'Создать новую область'" (click)="createElement('field')"><i class="bi bi-fullscreen"></i></div>
+    <div [matTooltip]="'Создать комментрий'" (click)="createElement('comment')"><i class="bi bi-chat-dots"></i></div>
   </div>
-  <app-draggable-field></app-draggable-field>
+  <app-draggable-field [elements]="elements"></app-draggable-field>
 </div>
