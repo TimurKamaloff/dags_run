@@ -1,0 +1,29 @@
+<div class="dag-modal">
+  <div class="dag-modal-title">Создание DAG</div>
+  <div class="dag-modal-content">
+    <h4>Параметры создания DAG</h4>
+    <div class="dag-modal-content-input-block">
+      <label for="">Название</label>
+      <input type="text" id="create-dag-name" placeholder="Название">
+    </div>
+    <div class="dag-modal-content-input-block">
+      <label for="">Описание</label>
+      <textarea></textarea>
+    </div>
+    <div class="dag-modal-content-input-block">
+      <label for="">Стартовая дата</label>
+      <input type="text" placeholder="start_date" class="input-half">
+    </div>
+    <div class="dag-modal-content-input-block">
+      <label for="">Расписание</label>
+      <input type="text" placeholder="Расписание" class="input-half">
+    </div>
+    <div class="dag-modal-content-input-block">
+      Catchup <mat-slide-toggle (click)="$event.stopPropagation()" color="primary" [hideIcon]="true"></mat-slide-toggle>
+    </div>
+  </div>
+  <div class="dag-modal-footer">
+    <button (click)="onClose()" class="dag-modal-footer-btn btn-red">Отменить</button>
+    <button class="dag-modal-footer-btn btn-blue">Сохранить</button>
+  </div>
+</div>

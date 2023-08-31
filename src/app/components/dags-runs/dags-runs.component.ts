@@ -5,6 +5,8 @@ import {MatButtonToggleChange} from "@angular/material/button-toggle";
 import {DAGS_STATUSES} from "./constants/dags-statuses";
 import {DagsRunsFilterConfigType} from "../../common-types/dags-runs-filter-config.type";
 import {ChangeDagStatusType} from "./types/change-dag-status.type";
+import {MatDialog} from "@angular/material/dialog";
+import {DagRunCreateModalComponent} from "./components/dag-run-create-modal/dag-run-create-modal.component";
 
 @Component({
   selector: 'app-dags-runs',
@@ -41,5 +43,12 @@ export class DagsRunsComponent {
       ...this.filtersConfig,
       [field]: (event?.target as any)?.value
     } as DagsRunsFilterConfigType);
+  }
+
+  constructor(private dialog: MatDialog) {}
+  openDialog() {
+    this.dialog.open(DagRunCreateModalComponent, {
+      panelClass: 'create-modal'
+    })
   }
 }

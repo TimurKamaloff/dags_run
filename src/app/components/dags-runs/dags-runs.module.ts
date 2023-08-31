@@ -12,9 +12,12 @@ import {MatSlideToggleModule} from "@angular/material/slide-toggle";
 import {AsyncPipe, DatePipe, NgForOf, NgIf} from "@angular/common";
 import {DagsRunsService} from "../../services/dags-runs.service";
 import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
+import {MatDialogModule} from "@angular/material/dialog";
+import { DagRunCreateModalComponent } from './components/dag-run-create-modal/dag-run-create-modal.component';
+import {CdkListbox} from "@angular/cdk/listbox";
 
 @NgModule({
-  declarations: [DagsRunsComponent, DagsRunsContainer, DagRunItemComponent],
+  declarations: [DagsRunsComponent, DagsRunsContainer, DagRunItemComponent, DagRunCreateModalComponent],
   imports: [
     DagsRunsRoutingModule,
     MatButtonModule,
@@ -23,11 +26,13 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
     MatInputModule,
     MatTooltipModule,
     MatSlideToggleModule,
+    MatDialogModule,
     DatePipe,
     AsyncPipe,
     NgForOf,
     MatProgressSpinnerModule,
     NgIf,
+    CdkListbox,
   ],
   providers: [DagsRunsService],
   bootstrap: [],

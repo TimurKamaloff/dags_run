@@ -86,3 +86,10 @@ mat-button-toggle-group {
 ::-webkit-scrollbar-thumb:hover {
   background: #999;
 }
+
+.mat-mdc-dialog-surface {
+  border-radius: 1rem !important;
+  box-shadow: 0.125rem 0.125rem 0.375rem 0 rgba(0, 0, 0, 0.25) !important;
+  padding: 0 !important;
+  background-color: #FFFFFF;
+}
