@@ -3,8 +3,12 @@
 
 $main-color: #272f3e;
 //$main-button-color: mat.get-color-from-palette(mat.$blue-palette, 800);
-$main-primary-color: #3C50E0;
-$second-primary-color: #8692E8;
+$main-background-color: #F6F8FA;
+$main-black-color: #5D626F;
+$main-primary-color: #0560FD;
+$second-primary-color: #337cf8;
+$light-background-color: #F9FBFE;
+$white-color: #FFFFFF;
 $grey-button-color: #EAEAEA;
 $white-font-color: #f4f4f4;
 
@@ -13,5 +17,10 @@ $default-offset-half: $default-offset / 2;
 $default-offset-quarter: $default-offset / 4;
 $default-offset-medium: $default-offset * 1.5;
 $default-offset-large: $default-offset * 2;
+$default-offset-one-quarter: $default-offset * 1.25;
+
+$offset-ten: .625rem;
+$offset-three: .188rem;
+$offset-five: .313rem;
 
 $common-header-height: 9vh;

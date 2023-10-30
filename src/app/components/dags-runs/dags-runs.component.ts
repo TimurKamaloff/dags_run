@@ -48,7 +48,8 @@ export class DagsRunsComponent {
   constructor(private dialog: MatDialog) {}
   openDialog() {
     this.dialog.open(DagRunCreateModalComponent, {
-      panelClass: 'create-modal'
+      panelClass: 'create-modal',
+      backdropClass: 'backdropBackground'
     })
   }
 }

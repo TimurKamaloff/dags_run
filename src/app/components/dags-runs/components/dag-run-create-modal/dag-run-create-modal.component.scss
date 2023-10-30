@@ -1,3 +1,5 @@
+@import "src/styles/vars";
+
 * {
   font-family: Montserrat, sans-serif !important;
 }
@@ -9,15 +11,15 @@
   &-title {
     font-size: 1.2rem;
     font-weight: 700;
-    padding: 1.25rem;
+    padding: $default-offset-one-quarter;
     border-bottom: 1px solid #F0F0F0;
   }
 
   &-content {
-    padding: 1.25rem;
+    padding: $default-offset-one-quarter;
 
     h4 {
-      margin-bottom: 1rem;
+      margin-bottom: $default-offset;
     }
 
     &-input-block {
@@ -27,17 +29,17 @@
       label {
         display: block;
         width: 100%;
-        font-size: 1rem;
+        font-size: $default-offset;
       }
 
       input, textarea {
-        margin-top: 0.5rem;
+        margin-top: $default-offset-half;
         width: calc(100% - 0.76rem);
         display: block;
         font-size: 0.875rem;
         background-color: #FFFFFF;
-        padding: 0.375rem;
-        border-radius: 0.25rem;
+        padding: $offset-five;
+        border-radius: $default-offset-quarter;
         border: 1px solid #D9D9D9;
       }
 
@@ -54,15 +56,15 @@
 
   &-footer {
     border-top: 1px solid #F0F0F0;
-    padding: 1.25rem;
+    padding: $default-offset-one-quarter;
     display: flex;
     justify-content: right;
-    gap: 1rem;
+    gap: $default-offset;
 
     &-btn {
-      padding: 0.5rem 1rem;
-      font-size: 1rem;
-      border-radius: 0.25rem;
+      padding: $default-offset-half $default-offset;
+      font-size: $default-offset;
+      border-radius: $default-offset-quarter;
       border: none;
       outline: none;
       color: #FFFFFF;
@@ -74,7 +76,7 @@
     }
 
     .btn-red {
-      background-color: #FF4D4F;
+      background-color: #F22837;
     }
     .btn-blue {
       background-color: #3C50E0;

@@ -2,12 +2,12 @@
 
 :host {
   .content {
-    background-color: #e5ebf5;
+    background-color: $light-background-color;
     border-radius: $default-offset-half;
     cursor: pointer;
     width: 100%;
     height: auto;
-    padding: 0.5rem 0;
+    padding: $default-offset-half 0;
     margin-bottom: $default-offset;
 
     &-row {
@@ -29,8 +29,8 @@
       align-items: center;
       justify-content: center;
       margin: 0 $default-offset-quarter;
-      height: 2rem;
-      width: 2rem;
+      height: $default-offset-large;
+      width: $default-offset-large;
       border-radius: 50%;
     }
 
@@ -51,8 +51,8 @@
     }
 
     .schedule {
-      background-color: #cfd5dd;
-      border-radius: 0.5rem;
+      background-color: #E5EAEF;
+      border-radius: $default-offset-half;
       padding: $default-offset-half $default-offset-medium;
     }
 
@@ -64,7 +64,7 @@
       background-color: #F1F5F9;
       border: 1px solid #D9D9D9;
       border-radius: 0;
-      padding: 0.188rem;
+      padding: $offset-three;
       text-align: center;
       width: 1.875rem;
       font-size: 1.2em;
@@ -73,7 +73,7 @@
 
     .dag-buttons {
       justify-content: right;
-      padding-right: 2rem;
+      padding-right: $default-offset-large;
     }
 
     .dag-row-buttons-control:hover {
@@ -93,15 +93,14 @@
     }
 
     #dag-tag-container {
-      margin-top: 0.118rem;
+      margin-top: $offset-three;
       max-width: 7rem;
       height: auto;
       .dag-tag {
         font-size: 0.7rem;
         padding: 0.1rem 0.8rem;
-        background-color: #D1DFF2;
-        border-radius: 0.313rem;
-        border: 1px solid #C7D5E6;
+        background-color: #E5EAEF;
+        border-radius: $offset-five;
         display: inline-flex;
         margin-left: 0.2rem;
         &:first-child {

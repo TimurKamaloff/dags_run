@@ -1,12 +1,12 @@
 @import "src/styles/vars";
 
 :host {
-  color: $white-font-color;
+  color: $main-black-color;
 
   .content {
     width: 100%;
     height: $common-header-height;
-    background-color: $main-color;
+    background-color: $main-background-color;
     display: grid;
     grid-template-columns: 1fr 2fr 1fr;
   }
@@ -29,11 +29,22 @@
       align-items: center;
       cursor: pointer;
       display: flex;
-      padding: 0 $default-offset-half;
+      //padding: 0 $default-offset-half;
+      padding: $default-offset-half $default-offset;
       justify-content: space-around;
+      border-radius: $default-offset;
 
       .mat-icon {
         margin: 0 $default-offset-quarter;
+      }
+
+      &-active {
+        color: $white-font-color;
+        background-color: $main-primary-color;
+
+        &:hover {
+          background-color: $second-primary-color;
+        }
       }
     }
   }

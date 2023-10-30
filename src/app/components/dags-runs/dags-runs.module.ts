@@ -15,9 +15,10 @@ import {MatProgressSpinnerModule} from "@angular/material/progress-spinner";
 import {MatDialogModule} from "@angular/material/dialog";
 import { DagRunCreateModalComponent } from './components/dag-run-create-modal/dag-run-create-modal.component';
 import {CdkListbox} from "@angular/cdk/listbox";
+import { DagRunContextMenuComponent } from './components/dag-run-context-menu/dag-run-context-menu.component';
 
 @NgModule({
-  declarations: [DagsRunsComponent, DagsRunsContainer, DagRunItemComponent, DagRunCreateModalComponent],
+  declarations: [DagsRunsComponent, DagsRunsContainer, DagRunItemComponent, DagRunCreateModalComponent, DagRunContextMenuComponent],
   imports: [
     DagsRunsRoutingModule,
     MatButtonModule,

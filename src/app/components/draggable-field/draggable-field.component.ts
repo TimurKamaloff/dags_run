@@ -178,10 +178,12 @@ export class DraggableFieldComponent implements OnChanges {
       .attr('class', 'comment')
       .attr('x', x)
       .attr('y', y)
+      .attr('rx', 20)
+      .attr('ry', 20)
       .attr('width', width)
       .attr('height', height)
       .attr('fill', 'white')
-      .attr('stroke', 'gray')
+      .attr('stroke', '#1E1D1F')
       .attr('name', 'comment')
       .style('cursor', 'pointer');
   }
@@ -200,10 +202,10 @@ export class DraggableFieldComponent implements OnChanges {
       .attr('height', height)
       .attr('rx', 20)
       .attr('ry', 20)
-      .attr('stroke', 'gray')
       .attr('name', 'task')
       .style('fill', 'white')
-      .style('cursor', 'pointer');
+      .style('cursor', 'pointer')
+      .style('box-shadow', '2px 2px 6px 0px rgba(0, 0, 0, 0.80)');
   }
 
   public drawFieldBlock(
@@ -220,8 +222,10 @@ export class DraggableFieldComponent implements OnChanges {
       .attr('y', y)
       .attr('width', width)
       .attr('height', height)
-      .attr('fill', '#d1eacc')
-      .attr('stroke', 'gray')
+      .attr('rx', 20)
+      .attr('ry', 20)
+      .attr('fill', '#E4F2E3')
+      .attr('stroke', '#1E1D1F')
       .attr('name', 'field')
       .style('cursor', 'pointer');
   }
